@@ -8,16 +8,22 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
-  padding-left: 0rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #root {
   min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Auth Container Styles */
 .auth-container {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +38,7 @@ body {
   max-width: 450px;
   width: 100%;
   animation: slideUp 0.5s ease-out;
+  margin: 0 auto;
 }
 
 @keyframes slideUp {
@@ -82,6 +89,7 @@ body {
   background: #f5f5f5;
   padding: 5px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .toggle-btn {
@@ -117,6 +125,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 100%;
 }
 
 .form-title {
@@ -130,6 +139,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 
 .form-group label {
@@ -195,6 +205,7 @@ body {
   text-align: center;
   font-size: 14px;
   animation: fadeIn 0.3s ease-in;
+  width: 100%;
 }
 
 @keyframes fadeIn {
@@ -219,6 +230,9 @@ body {
   min-height: 100vh;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dashboard-header {
@@ -230,6 +244,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
+  width: 100%;
 }
 
 .dashboard-title {
@@ -303,8 +318,18 @@ body {
 .dashboard-content {
   padding: 40px;
   max-width: 1400px;
-  margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .stats-grid {
@@ -313,6 +338,7 @@ body {
   gap: 20px;
   margin-bottom: 30px;
   width: 100%;
+  max-width: 1400px;
 }
 
 .stat-card {
@@ -321,6 +347,10 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .stat-card:hover {
@@ -352,20 +382,27 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   width: 100%;
+  max-width: 1400px;
 }
 
 .content-card h2 {
   color: #333;
   margin-bottom: 20px;
   font-size: 22px;
+  text-align: center;
 }
 
 /* Table Styles */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
 .users-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  overflow-x: auto;
+  min-width: 600px;
 }
 
 .users-table th,
@@ -396,6 +433,7 @@ body {
   padding: 40px;
   color: #666;
   font-size: 16px;
+  width: 100%;
 }
 
 .error-message {
@@ -405,10 +443,13 @@ body {
   border-radius: 8px;
   margin: 20px 0;
   border: 1px solid #f5c6cb;
+  text-align: center;
+  width: 100%;
 }
 
 .error-container {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -443,6 +484,7 @@ body {
   text-align: center;
   padding: 60px 20px;
   color: #999;
+  width: 100%;
 }
 
 .empty-state-icon {
@@ -452,12 +494,20 @@ body {
 }
 
 /* Customer Page Specific Styles */
+.menu-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
   margin-top: 30px;
   width: 100%;
+  max-width: 1400px;
 }
 
 .menu-item {
@@ -466,6 +516,10 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .menu-item:hover {
@@ -485,6 +539,10 @@ body {
 
 .menu-item-content {
   padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu-item-name {
@@ -492,6 +550,7 @@ body {
   font-weight: 600;
   color: #333;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .menu-item-price {
@@ -499,10 +558,12 @@ body {
   font-weight: bold;
   color: #667eea;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .order-btn {
   width: 100%;
+  max-width: 200px;
   padding: 12px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -533,7 +594,16 @@ body {
     padding: 20px;
   }
 
+  .user-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .dashboard-content {
+    padding: 20px;
+  }
+
+  .content-card {
     padding: 20px;
   }
 
@@ -547,16 +617,85 @@ body {
 
   .users-table {
     font-size: 14px;
-    display: block;
-    overflow-x: auto;
   }
 
   .users-table th,
   .users-table td {
-    padding: 10px;
+    padding: 10px 8px;
   }
 
   .auth-card {
     padding: 30px 20px;
   }
+
+  .brand-title {
+    font-size: 28px;
+  }
+
+  .dashboard-title h1 {
+    font-size: 20px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .content-card {
+    padding: 15px;
+  }
+
+  .auth-card {
+    padding: 25px 15px;
+  }
+
+  .brand-title {
+    font-size: 24px;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .toggle-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .menu-item-content {
+    padding: 15px;
+  }
+}
+
+/* Additional utility classes for better alignment */
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
 }
